@@ -1,7 +1,5 @@
 'use strict';
 
-
-
 /**
  * add event listener on multiple elements
  */
@@ -11,8 +9,6 @@ const addEventOnElements = function (elements, eventType, callback) {
     elements[i].addEventListener(eventType, callback);
   }
 }
-
-
 
 /**
  * PRELOADER
@@ -25,12 +21,24 @@ window.addEventListener("DOMContentLoaded", function () {
   document.body.classList.add("loaded");
 });
 
-
-
 /**
  * NAVBAR
  * navbar toggle for mobile
  */
+
+// Add event listener to close the navbar when clicking a link
+const navbarLinks = document.querySelectorAll(".navbar-link");
+
+navbarLinks.forEach(link => {
+  link.addEventListener("click", function() {
+    // Close the navbar by removing the active class
+    navbar.classList.remove("active");
+    navToggleBtn.classList.remove("active");
+    overlay.classList.remove("active");
+    document.body.classList.remove("nav-active");
+  });
+});
+
 
 const navTogglers = document.querySelectorAll("[data-nav-toggler]");
 const navToggleBtn = document.querySelector("[data-nav-toggle-btn]");
@@ -46,8 +54,6 @@ const toggleNavbar = function () {
 
 addEventOnElements(navTogglers, "click", toggleNavbar);
 
-
-
 /**
  * HEADER
  * header active when window scroll down to 100px
@@ -62,8 +68,6 @@ window.addEventListener("scroll", function () {
     header.classList.remove("active");
   }
 });
-
-
 
 /**
  * SLIDER
@@ -83,39 +87,38 @@ const initSlider = function (currentSlider) {
   let currentSlidePos = 0;
 
   const moveSliderItem = function () {
-    sliderContainer.style.transform = `translateX(-${sliderContainer.children[currentSlidePos].offsetLeft}px)`;
+    if (window.innerWidth <= 540) {
+      // Mobile behavior — scrollBy
+      sliderContainer.scrollTo({
+        left: sliderContainer.children[currentSlidePos].offsetLeft,
+        behavior: 'smooth'
+      });
+    } else {
+      // Desktop behavior — transform
+      sliderContainer.style.transform = `translateX(-${sliderContainer.children[currentSlidePos].offsetLeft}px)`;
+    }
   }
 
-  /**
-   * NEXT SLIDE
-   */
   const slideNext = function () {
     const slideEnd = currentSlidePos >= totalSlidableItems;
-
     if (slideEnd) {
       currentSlidePos = 0;
     } else {
       currentSlidePos++;
     }
-
     moveSliderItem();
   }
 
-  sliderNextBtn.addEventListener("click", slideNext);
-
-  /**
-   * PREVIOUS SLIDE
-   */
   const slidePrev = function () {
     if (currentSlidePos <= 0) {
       currentSlidePos = totalSlidableItems;
     } else {
       currentSlidePos--;
     }
-
     moveSliderItem();
   }
 
+  sliderNextBtn.addEventListener("click", slideNext);
   sliderPrevBtn.addEventListener("click", slidePrev);
 
   const dontHaveExtraItem = totalSlidableItems <= 0;
@@ -124,26 +127,20 @@ const initSlider = function (currentSlider) {
     sliderPrevBtn.style.display = 'none';
   }
 
-  /**
-   * slide with [shift + mouse wheel]
-   */
-
+  // Slide with [shift + mouse wheel]
   currentSlider.addEventListener("wheel", function (event) {
     if (event.shiftKey && event.deltaY > 0) slideNext();
     if (event.shiftKey && event.deltaY < 0) slidePrev();
   });
 
-  /**
-   * RESPONSIVE
-   */
-
   window.addEventListener("resize", function () {
     totalSliderVisibleItems = Number(getComputedStyle(currentSlider).getPropertyValue("--slider-items"));
     totalSlidableItems = sliderContainer.childElementCount - totalSliderVisibleItems;
-
     moveSliderItem();
   });
 
 }
 
-for (let i = 0, len = sliders.length; i < len; i++) { initSlider(sliders[i]); }
+for (let i = 0, len = sliders.length; i < len; i++) {
+  initSlider(sliders[i]);
+}

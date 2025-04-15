@@ -1043,3 +1043,133 @@ body.nav-active { overflow: hidden; }
 
 }
 
+/* Make hero image smaller and rounded on small screens */
+@media (max-width: 540px) {
+
+  .hero-banner {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%; 
+    margin: 20px auto;
+    display: block;
+    animation: none;
+  }
+
+  .h1.hero-title {
+    white-space: nowrap;
+    text-align: center;
+    font-size: 1.4rem;
+  }
+
+  .hero-subtitle {
+    text-align: center;
+  }
+
+  .section-title {
+    white-space: nowrap;
+    text-align: center;
+    font-size: 2.2rem;
+  }
+
+  .section-subtitle {
+    text-align: center;
+    font-size: 16px;
+  }
+
+  .section-text {
+    text-align: center;
+    padding: 0 10px;
+  }
+
+  .slider-container {
+    display: flex;
+    gap: 16px;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    padding-bottom: 10px;
+  }
+
+  .slider-item {
+    min-width: 90%;
+    flex-shrink: 0;
+    scroll-snap-align: center;
+  }
+
+  .portfolio-card {
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .portfolio-card .card-content {
+    position: static;
+    opacity: 1;
+    transform: none;
+  }
+
+  .portfolio-card .card-content h3 {
+    font-size: 18px;
+    margin-top: 10px;
+  }
+}
+
+/* For even smaller phones */
+@media (max-width: 420px) {
+
+  .hero-banner {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin: 10px auto;
+  }
+
+  .h1.hero-title {
+    white-space: nowrap;
+    text-align: center;
+    font-size: 1.8rem;
+  }
+
+  .hero-subtitle {
+    text-align: center;
+  }
+
+  .section-title {
+    white-space: nowrap;
+    text-align: center;
+    font-size: 1.4rem;
+  }
+
+  .section-subtitle {
+    text-align: center;
+    font-size: 14px;
+  }
+
+  .section-text {
+    font-size: 13px;
+    padding: 0 10px;
+  }
+
+  .slider-container {
+    display: flex;
+    gap: 12px;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    padding-bottom: 10px;
+  }
+
+  .slider-item {
+    min-width: 95%;
+    flex-shrink: 0;
+    scroll-snap-align: center;
+  }
+
+  .portfolio-card ion-icon {
+    font-size: 3rem !important;
+  }
+}
+
+
+
