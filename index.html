@@ -1,0 +1,593 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- 
+    - primary meta tags
+  -->
+  <title>NeelaDhasan - Software Developer</title>
+  <meta name="title" content="NeelaDhasan - Software Developer">
+  <meta name="description" content="This is a personal portfolio by Neeladhasan">
+
+  <!-- 
+    - favicon
+  -->
+  <link rel="shortcut icon" href="./favicon.svg" type="image/svg+xml">
+
+  <!-- 
+    - google font link
+  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- 
+    - custom css link
+  -->
+  <link rel="stylesheet" href="./assets/css/style.css">
+
+  <!-- 
+    - preload images
+  -->
+  <link rel="preload" as="image" href="./assets/images/hero-banner.jpg">
+
+</head>
+
+<body>
+
+  <!-- 
+    - #PRELOADER
+  -->
+
+  <div class="preloader" data-preloader>
+    <div class="circle"></div>
+  </div>
+
+
+
+
+
+  <!-- 
+    - #HEADER
+  -->
+
+  <header class="header" data-header>
+    <div class="container">
+
+      <a href="#" class="logo">
+        <img src="./assets/images/logo.svg" width="170" height="40" alt="Pfolio home">
+      </a>
+
+      <button class="nav-toggle-btn" data-nav-toggler data-nav-toggle-btn aria-label="Toggle menu">
+        <span class="line line-1"></span>
+        <span class="line line-2"></span>
+      </button>
+
+      <nav class="navbar" data-navbar>
+        <ul class="navbar-list">
+      
+          <li>
+            <a href="#" class="navbar-link">Home</a>
+          </li>
+      
+          <li>
+            <a href="#skills" class="navbar-link">Skills</a>
+          </li>
+      
+          <li>
+            <a href="#projects" class="navbar-link">Projects</a>
+          </li>
+      
+          <li>
+            <a href="#contact" class="navbar-link">Contact</a>
+          </li>
+      
+        </ul>
+      </nav>
+      
+
+      <div class="overlay" data-nav-toggler data-overlay></div>
+
+    </div>
+  </header>
+
+
+
+
+
+  <main>
+    <article>
+
+      <!-- 
+        - #HERO
+      -->
+
+      <section class="section hero" aria-label="home">
+        <div class="container">
+
+          <div class="hero-content">
+
+            <h1 class="h1 hero-title">Neela Dhasan</h1>
+
+            <p class="hero-subtitle">
+              Creative SoftWare Developer
+            </p>
+
+            <div class="hero-banner">
+              <img src="./assets/images/hero-banner.jpg" width="800" height="800" alt="kane williams" class="w-100">
+            </div>
+
+            <p class="section-text">
+              "I'm Neeladhasan — an engineer by training, a creator at heart. I turn ideas into elegant digital products, with a blend of code, creativity, and purpose."
+            </p>
+
+            <a href="assets/resume/Neeladhasan_Resume_new.pdf.pdf" download="Neeladhasan_CV.pdf" class="btn has-before">
+              <span class="span">Download CV</span>
+              <ion-icon name="download-outline" aria-hidden="true"></ion-icon>
+            </a>
+            
+          </div>
+
+        </div>
+      </section>
+
+
+
+
+
+      <!-- 
+        - #SERVICE
+      -->
+
+      <section id="skills" class="service" aria-labelledby="service-label">
+        <div class="container">
+      
+          <div class="title-wrapper">
+      
+            <div>
+              <p class="section-subtitle">
+                Skills That I Provide
+              </p>
+      
+              <h2 class="h2 section-title" id="service-label">Skills</h2>
+            </div>
+      
+            <p class="section-text">
+              "Every line of code and circuit I design aims to bridge imagination with reality. From embedded systems to modern web applications, I blend adaptability, logic, and creativity — here’s a glimpse into the skillset I bring to every project."
+            </p>
+      
+          </div>
+      
+          <div class="slider" data-slider>
+      
+            <ul class="slider-container service-list" data-slider-container>
+      
+              <li class="slider-item" data-slider-item>
+                <div class="service-card">
+      
+                  <div class="card-icon">
+                    <ion-icon name="code-slash-outline"></ion-icon>
+                  </div>
+      
+                  <h3 class="h3 card-title">Programming Languages</h3>
+      
+                  <p class="card-text">
+                    Proficient in Java, C++, C, and Verilog — blending low-level control with modern problem-solving patterns.
+                  </p>
+      
+                  <span class="text-lg card-number">01</span>
+                  <a href="#" class="layer-link" aria-label="More about my programming skills"></a>
+      
+                </div>
+              </li>
+      
+              <li class="slider-item" data-slider-item>
+                <div class="service-card">
+      
+                  <div class="card-icon">
+                    <ion-icon name="laptop-outline"></ion-icon>
+                  </div>
+      
+                  <h3 class="h3 card-title">Web Development</h3>
+      
+                  <p class="card-text">
+                    Skilled in MERN Stack (MongoDB, Express, React, Node.js),Git— crafting modern, responsive, and scalable web solutions.
+                  </p>
+      
+                  <span class="text-lg card-number">02</span>
+                  <a href="#" class="layer-link" aria-label="More about my web development skills"></a>
+      
+                </div>
+              </li>
+      
+              <li class="slider-item" data-slider-item>
+                <div class="service-card">
+      
+                  <div class="card-icon">
+                    <ion-icon name="hardware-chip-outline"></ion-icon>
+                  </div>
+      
+                  <h3 class="h3 card-title">Embedded Systems</h3>
+      
+                  <p class="card-text">
+                    Experienced with Arduino-based prototyping and embedded system design, merging hardware and software for real-world applications.
+                  </p>
+      
+                  <span class="text-lg card-number">03</span>
+                  <a href="#" class="layer-link" aria-label="More about my embedded systems skills"></a>
+      
+                </div>
+              </li>
+      
+              <li class="slider-item" data-slider-item>
+                <div class="service-card">
+      
+                  <div class="card-icon">
+                    <ion-icon name="sparkles-outline"></ion-icon>
+                  </div>
+      
+                  <h3 class="h3 card-title">Core Strengths</h3>
+      
+                  <p class="card-text">
+                    Adaptability, logical problem-solving, and collaborative leadership — essential qualities for thriving in fast-paced tech landscapes.
+                  </p>
+      
+                  <span class="text-lg card-number">04</span>
+                  <a href="#" class="layer-link" aria-label="More about my core strengths"></a>
+      
+                </div>
+              </li>
+      
+            </ul>
+      
+            <div class="slider-controls">
+              <button class="slider-control prev" data-slider-prev aria-label="Slide to previous item">
+                <div class="line"></div>
+                <div class="arrow"></div>
+              </button>
+      
+              <button class="slider-control next" data-slider-next aria-label="Slide to next item">
+                <div class="line"></div>
+                <div class="arrow"></div>
+              </button>
+            </div>
+      
+          </div>
+      
+        </div>
+      </section>
+      
+
+
+
+
+      <!-- 
+        - #SKILLS
+      -->
+
+      <section class="section skills" aria-label="my skills">
+        <div class="container">
+      
+          <p class="section-subtitle">Skills That Shape My Future</p>
+      
+          <h2 class="h2 section-title">I Engineer Ideas Into Reality.</h2>
+      
+          <div class="skills-wrapper">
+      
+            <div>
+              <p class="section-text">
+                I combine the logic of engineering with creative problem-solving to build scalable tech — from embedded systems to full-stack applications.
+              </p>
+      
+              <p class="section-text">
+                Whether it's writing efficient code, designing circuits, or collaborating on product development, I focus on clarity, impact, and growth.
+              </p>
+      
+              <a href="#" class="btn has-before">neeladhasan@gmail.com</a>
+            </div>
+      
+            <div>
+      
+              <ul class="skills-list">
+      
+                <li>
+                  <div class="progress-wrapper">
+                    <p class="progress-label">Programming (C / C++ / Java)</p>
+                    <data class="progress-value" value="90">90%</data>
+                  </div>
+                  <div class="progress-bg">
+                    <div class="progress" style="width: 90%;"></div>
+                  </div>
+                </li>
+      
+                <li>
+                  <div class="progress-wrapper">
+                    <p class="progress-label">Web Development (MERN Stack)</p>
+                    <data class="progress-value" value="85">85%</data>
+                  </div>
+                  <div class="progress-bg">
+                    <div class="progress" style="width: 85%;"></div>
+                  </div>
+                </li>
+      
+                <li>
+                  <div class="progress-wrapper">
+                    <p class="progress-label">Embedded Systems (Arduino, Verilog)</p>
+                    <data class="progress-value" value="80">80%</data>
+                  </div>
+                  <div class="progress-bg">
+                    <div class="progress" style="width: 80%;"></div>
+                  </div>
+                </li>
+      
+                <li>
+                  <div class="progress-wrapper">
+                    <p class="progress-label">Problem-Solving & Logical Thinking</p>
+                    <data class="progress-value" value="95">95%</data>
+                  </div>
+                  <div class="progress-bg">
+                    <div class="progress" style="width: 95%;"></div>
+                  </div>
+                </li>
+      
+              </ul>
+      
+            </div>
+      
+          </div>
+      
+        </div>
+      </section>
+      
+
+
+
+
+
+      <!-- 
+        - #PORTFOLIO
+      -->
+
+      <section id="projects" class="portfolio" aria-labelledby="portfolio-label">
+
+        <div class="title-wrapper container">
+      
+          <div>
+            <p class="section-subtitle" id="portfolio-label">My Projects</p>
+            <h2 class="h2 section-title">Portfolio</h2>
+          </div>
+      
+          <p class="section-text">
+            Here are a few of the projects I've crafted with passion and precision. Each one taught me valuable lessons in design, logic, and creativity.
+          </p>
+      
+        </div>
+      
+        <div class="slider" data-slider>
+      
+          <ul class="slider-container" data-slider-container>
+      
+            <li class="slider-item">
+              <div class="portfolio-card img-holder" style="--width: 600; --height: 600; display: flex; align-items: center; justify-content: center;">
+      
+                <ion-icon name="planet-outline" style="font-size: 5rem; color: var(--primary-color);"></ion-icon>
+      
+                <div class="card-content">
+                  <h3 class="h3 card-title">NASA APOD Project</h3>
+                </div>
+      
+                <a href="https://github.com/Neeladas03/APOD" class="layer-link" target="_blank"></a>
+      
+              </div>
+            </li>
+      
+            <li class="slider-item">
+              <div class="portfolio-card img-holder" style="--width: 600; --height: 600; display: flex; align-items: center; justify-content: center;">
+      
+                <ion-icon name="barbell-outline" style="font-size: 5rem; color: var(--primary-color);"></ion-icon>
+      
+                <div class="card-content">
+                  <h3 class="h3 card-title">Dasnormous</h3>
+                </div>
+      
+                <a href="https://github.com/Neeladas03/Dasnormous" class="layer-link" target="_blank"></a>
+      
+              </div>
+            </li>
+      
+            <li class="slider-item">
+              <div class="portfolio-card img-holder" style="--width: 600; --height: 600; display: flex; align-items: center; justify-content: center;">
+      
+                <ion-icon name="document-text-outline" style="font-size: 5rem; color: var(--primary-color);"></ion-icon>
+      
+                <div class="card-content">
+                  <h3 class="h3 card-title">ThinkBin</h3>
+                </div>
+      
+                <a href="https://github.com/Neeladas03/ThinkBin" class="layer-link" target="_blank"></a>
+      
+              </div>
+            </li>
+      
+          </ul>
+      
+        </div>
+      
+      </section>
+      
+      
+          <div class="slider-controls">
+            <button class="slider-control prev" data-slider-prev aria-label="Slide to previous item">
+              <div class="line"></div>
+              <div class="arrow"></div>
+            </button>
+      
+            <button class="slider-control next" data-slider-next aria-label="Slide to next item">
+              <div class="line"></div>
+              <div class="arrow"></div>
+            </button>
+          </div>
+      
+        </div>
+      
+      </section>
+      
+
+
+
+
+      <!-- 
+        - #BLOG
+      -->
+
+      <section class="section blog" aria-labelledby="education-label">
+        <div class="container">
+      
+          <p class="section-subtitle" id="education-label">My Journey</p>
+          <h2 class="h2 section-title">Education</h2>
+      
+          <ul class="blog-list">
+      
+            <li>
+              <div class="blog-card">
+      
+                <figure class="card-banner img-holder" style="--width: 700; --height: 470; display: flex; align-items: center; justify-content: center;">
+                  <img src="./assets/images/pkd.jpg" alt="10th & 12th - PKD Matric Higher Secondary School" style="max-width: 100%; max-height: 100%;">
+                </figure>
+      
+                <div class="card-content">
+                  <time class="time" datetime="2022-06-01">
+                    <span class="span text-lg">2020</span> – 2022
+                  </time>
+                  <div>
+                    <h3 class="h3 card-title">PKD Matric Higher Secondary School, Pollachi</h3>
+                    <p class="card-text">
+                      Completed Class 10 and 12 with a strong academic record — Cumulative Percentage: <b>93%</b>.
+                    </p>
+                  </div>
+                </div>
+      
+              </div>
+            </li>
+      
+            <li>
+              <div class="blog-card">
+      
+                <figure class="card-banner img-holder" style="--width: 700; --height: 470; display: flex; align-items: center; justify-content: center;">
+                  <img src="./assets/images/skct-logo.jpg" alt="B.E. Electronics and Communication Engineering at SKCT" style="max-width: 100%; max-height: 100%;">
+                </figure>
+      
+                <div class="card-content">
+                  <time class="time" datetime="2022-06-01">
+                    <span class="span text-lg">2022</span> – 2026
+                  </time>
+                  <div>
+                    <h3 class="h3 card-title">Sri Krishna College of Technology, Coimbatore</h3>
+                    <p class="card-text">
+                      Pursuing B.E. in Electronics and Communication Engineering. Current CGPA: <b>8.09 / 10</b>.
+                    </p>
+                  </div>
+                </div>
+      
+              </div>
+            </li>
+      
+          </ul>
+      
+        </div>
+      </section>
+      
+      
+
+    </article>
+  </main>
+
+
+
+
+
+  <!-- 
+    - #FOOTER
+  -->
+
+  <footer id="contact"class="footer">
+    <div class="container">
+  
+      <ul class="footer-list">
+  
+        <li>
+          <p class="h4 footer-list-title">Get in touch</p>
+        </li>
+  
+        <li>
+          <a href="mailto:neeladhasan@gmail.com" class="footer-link">neeladhasan@gmail.com</a>
+        </li>
+  
+      </ul>
+  
+      <ul class="footer-list">
+  
+        <li>
+          <p class="h4 footer-list-title">Location</p>
+        </li>
+  
+        <li>
+          <a href="#" class="footer-link">Pollachi - Coimbatore</a>
+        </li>
+  
+      </ul>
+  
+      <ul class="social-list">
+  
+        <li>
+          <a href="https://www.linkedin.com/in/neeladhasan/" target="_blank" class="social-link" aria-label="LinkedIn">
+            <ion-icon name="logo-linkedin"></ion-icon>
+          </a>
+        </li>
+  
+        <li>
+          <a href="https://github.com/Neeladas03" target="_blank" class="social-link" aria-label="GitHub">
+            <ion-icon name="logo-github"></ion-icon>
+          </a>
+        </li>
+  
+        <li>
+          <a href="https://leetcode.com/u/727822tuec132/" target="_blank" class="social-link" aria-label="LeetCode">
+            <img src="./assets/icons/leetcode-icon.svg" alt="LeetCode" width="24" height="24">
+          </a>
+        </li>
+  
+        <li>
+          <a href="https://www.geeksforgeeks.org/user/727822t5tl3/" target="_blank" class="social-link" aria-label="GeeksforGeeks">
+            <img src="./assets/icons/gfg-icon.svg" alt="GeeksforGeeks" width="24" height="24">
+          </a>
+        </li>
+  
+      </ul>
+  
+    </div>
+  </footer>
+  
+
+
+
+
+
+  <!-- 
+    - custom js link
+  -->
+  <script src="./assets/js/script.js"></script>
+
+  <!-- 
+    - ionicon link
+  -->
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+</body>
+
+</html>
