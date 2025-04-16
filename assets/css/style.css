@@ -371,6 +371,14 @@ body.nav-active { overflow: hidden; }
   #PRELOADER
 \*-----------------------------------*/
 
+body {
+  overflow: hidden;
+}
+
+body.loaded {
+  overflow: auto;
+}
+
 .preloader {
   position: fixed;
   top: 0;
@@ -381,8 +389,7 @@ body.nav-active { overflow: hidden; }
   z-index: 10;
   display: grid;
   place-items: center;
-  transition: var(--transition-2);
-  transition-delay: 0.5s;
+  transition: opacity 0.5s ease;
 }
 
 .preloader.loaded {

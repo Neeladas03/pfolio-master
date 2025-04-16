@@ -14,10 +14,13 @@ const addEventOnElements = function (elements, eventType, callback) {
  */
 const preloader = document.querySelector("[data-preloader]");
 
-window.addEventListener("DOMContentLoaded", function () {
-  preloader.classList.add("loaded");
-  document.body.classList.add("loaded");
+window.addEventListener("load", function () {
+  setTimeout(() => {
+    preloader.classList.add("loaded");
+    document.body.classList.add("loaded");
+  }, 3000);  // 3 seconds for the ball to fully swing
 });
+
 
 /**
  * NAVBAR
