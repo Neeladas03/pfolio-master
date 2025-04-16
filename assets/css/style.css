@@ -7,6 +7,48 @@
  */
 
 
+ .logo {
+  display: inline-block;
+  text-decoration: none;
+}
+
+.logo-scan {
+  position: relative;
+  width: 130px;
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo-img {
+  width: 130px;
+  height: auto;
+  border-radius: 8px;
+  z-index: 2;
+}
+
+.scan-dot {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 8px;
+  height: 8px;
+  background: #00f0ff;
+  border-radius: 50%;
+  transform: translateY(-50%);
+  z-index: 1;
+  animation: scanMove 3s ease-in-out infinite alternate;
+}
+
+@keyframes scanMove {
+  0% {
+    left: 0;
+  }
+  100% {
+    left: calc(100% - 8px);
+  }
+}
 
 
 
@@ -348,22 +390,24 @@ body.nav-active { overflow: hidden; }
   pointer-events: none;
 }
 
-.preloader .circle {
-  width: 60px;
-  height: 60px;
-  border: 2px solid var(--raisin-black);
-  border-top-color: var(--white);
-  border-radius: var(--radius-circle);
-  animation: rotate360 1s linear infinite;
-  transition: var(--transition-2);
+.preloader .ball {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: var(--white);
+  position: relative;
+  animation: ballBounce 1.5s ease-in-out infinite alternate;
 }
 
-@keyframes rotate360 {
-  0% { transform: rotate(0); }
-  100% { transform: rotate(1turn); }
+@keyframes ballBounce {
+  0% { transform: translateX(-60px); }
+  100% { transform: translateX(60px); }
 }
 
-.preloader.loaded .circle { opacity: 0; }
+.preloader.loaded .ball {
+  opacity: 0;
+  transform: scale(0);
+}
 
 
 
